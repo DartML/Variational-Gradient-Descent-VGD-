@@ -1,6 +1,6 @@
 library(cmdstanr)
 library(stein.thinning)
-source('../SVGD/svgd.R')
+source('./svgd.R')
 
 data(logit)
 
