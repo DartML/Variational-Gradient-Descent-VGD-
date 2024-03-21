@@ -1,8 +1,7 @@
-library(spatstat.geom)
-
 svgd_kernel <- function(theta, h = -1) {
   # Squared pairwise distance
-  sq_dist = pairdist(theta)**2
+  sq_dist = as.matrix(dist(theta, method = "euclidean", 
+                 diag = TRUE, upper = TRUE)**2)
   
   # Median trick for h < 0
   if (h < 0) {
